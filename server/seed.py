@@ -40,8 +40,8 @@ with app.app_context():
         name = fake.first_name()
         while name in [a.name for a in animals]:
             name=fake.first_name()
-        a = Animal(name=name, species=rc(species))
-        a.zookeeper = rc(zookeepers)
+        a = Animal(name=name, species=rc(species),zookeeper = rc(zookeepers))
+        
         a.enclosure = rc(enclosures)
         animals.append(a)
 
